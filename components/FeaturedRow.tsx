@@ -61,7 +61,7 @@ export default function FeaturedRow({ id, title, description }: FeaturedRowProps
                         title={restaurant.name}
                         rating={restaurant.rating}
                         address={restaurant.address}
-                        genre={restaurant.category}
+                        genre={restaurant.type.name}
                         shortDescription={restaurant.short_description}
                         dishes={restaurant.dishes}
                         long={restaurant.long}
