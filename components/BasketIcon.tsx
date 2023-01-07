@@ -11,10 +11,17 @@ export default function BasketIcon() {
     const navigation = useNavigation();
     const basketTotal = useSelector(selectBasketTotal);
 
+    if (items.length === 0) {
+        return null;
+    }
+
     return (
         <View className="absolute bottom-10 w-full z-50">
-            <TouchableOpacity className="mx-5 bg-[#00ccbb] p-4 rounded-lg flex-row items-center gap-1">
-                <Text className="text-white font-extrabold text-lg bg-[#00ccbb] py-1 px-2">{items?.length}</Text>
+            <TouchableOpacity
+                onPress={() => navigation.navigate("Basket")}
+                className="mx-5 bg-[#00ccbb] p-4 rounded-lg flex-row items-center space-x-1"
+            >
+                <Text className="text-white font-extrabold text-lg bg-[#01A296] py-1 px-2">{items?.length}</Text>
                 <Text className="text-white flex-1 font-extrabold text-lg text-center">View Basket</Text>
                 <Text className="text-lg text-center font-extrabold">
                     <Currency quantity={basketTotal} currency="GBP" />

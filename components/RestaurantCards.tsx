@@ -46,7 +46,7 @@ export default function RestaurantCards({
                     dishes,
                     long,
                     lat,
-                });
+                } as RestaurantCardsProps);
             }}
             className="bg-white mr-3 shadow"
         >
