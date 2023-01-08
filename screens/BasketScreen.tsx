@@ -16,7 +16,6 @@ export default function BasketScreen() {
     const [groupedItemsInBasket, setGroupedItemsInBasket] = useState([]);
     const dispatch = useDispatch();
 
-    console.log(restaurant);
     useMemo(() => {
         const groupedItems = basketItems.reduce((result: any, item: any) => {
             (result[item.id] = result[item.id] || []).push(item);
