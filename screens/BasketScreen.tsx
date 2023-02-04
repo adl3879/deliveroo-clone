@@ -55,7 +55,7 @@ export default function BasketScreen() {
                 </View>
 
                 <ScrollView className="divide-y divide-gray-100">
-                    {Object.entries(groupedItemsInBasket).map(([key, items]: [number, any]) => (
+                    {Object.entries(groupedItemsInBasket).map(([key, items]: [number, any[]]) => (
                         <View key={key} className="flex-row items-center space-x-3 bg-white py-2 px-5">
                             <Text className="text-[#00ccbb]">{items.length} x</Text>
                             <Image source={{ uri: urlFor(items[0].image).url() }} className="h-12 w-12 rounded-full" />

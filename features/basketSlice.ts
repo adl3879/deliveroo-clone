@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import type { PayloadAction } from "@reduxjs/toolkit";
 
 export interface CounterState {
     items: Array<any>;
@@ -22,7 +21,7 @@ export const basketSlice = createSlice({
             if (index >= 0) {
                 newBasket.splice(index, 1);
             } else {
-                console.warn(`Can't remove product (id: ${action.payload.id}) as it's not in basket!`);
+                // console.warn(`Can't remove product (id: ${action.payload.id}) as it's not in basket!`);
             }
             state.items = newBasket;
         },
